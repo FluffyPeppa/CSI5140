@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Fall Detection</string>
+    <string name="navigation_home">Main</string>
+    <string name="navigation_place">Map</string>
+    <string name="navigation_settings">Setting</string>
+    <string name="navigation_about">About</string>
+    <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
+    <string name="drawer_open">open</string>
+    <string name="drawer_close">close</string>
+
+    <string-array name="sex">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+</resources>

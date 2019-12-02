@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="Personal Information"
+        android:summary="Personal Information"
+        android:key="pre_key_personal_settings">
+        <EditTextPreference
+            android:maxLines="1"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:defaultValue="Mrs.Michelle"
+            android:key="pre_key_name"
+            android:title="Name"
+            android:summary="Please enter your name"/>
+        <ListPreference
+            android:defaultValue="0"
+            android:key="pre_key_sex"
+            android:title="Gender"
+            android:summary="Gender"
+            android:dialogTitle="Gender"
+            android:entries="@array/sex"
+            android:entryValues="@array/sex"/>
+        <EditTextPreference
+            android:title="Age"
+            android:summary="Please enter your age"
+            android:key="pre_key_age"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Alert Setting"
+        android:summary="Alert Setting"
+        android:key="pre_key_alert_settings">
+        <RingtonePreference
+            android:title="Ring Setting"
+            android:summary="Ring Setting"
+            android:showSilent="false"
+            android:key="pre_key_alarm"
+            android:ringtoneType="alarm"/>
+        <SwitchPreference
+            android:title="Vibrate"
+            android:summary="Vibrate"
+            android:key="pre_key_vibrate"/>
+        <EditTextPreference
+            android:title="Emergency Contact"
+            android:summary="Emergency Contact"
+            android:key="pre_key_phone"/>
+    </PreferenceCategory>
+
+</PreferenceScreen>
