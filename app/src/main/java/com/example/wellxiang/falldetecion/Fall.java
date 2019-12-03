@@ -22,7 +22,7 @@ public class Fall{
     }
 
     /*
-    设置阈值
+    threshold
      */
     public void setThresholdValue(float highThreshold, float lowThreshold){
         this.highThresholdValue = highThreshold;
@@ -32,13 +32,13 @@ public class Fall{
 
 
     /*
-    设置传感器采样率
+    sensor
      */
 //    public void setSENSOR_RATE(int sensor_rate){
 //        SENSOR_RATE = sensor_rate;
 //    }
     /*
-    跌倒检测
+     threshold
      */
     public  void fallDetection(){
         Log.d(TAG, "Fall.fallDetection()");
@@ -94,13 +94,9 @@ public class Fall{
 //        Log.d(TAG, "Fall.svmCollector" + svmData[svmCount]);
     }
 
-    /*
-    svm中值滤波
-     */
+
     public static void setSvmFilteringData(){
-        //中值滤波取的三个值
         float s1, s2, s3, temp;
-        //冒泡排序
         for (int i = 0; i < svmFilteringData.length-1; i++){
             if(i == 0){
                 s1 = svmData[i];
@@ -148,7 +144,7 @@ public class Fall{
         for (int i = 0; i < svmData.length; i++){
             svmData[i] = 0;
         }
-        //中值滤波
+
         for (int i = 0; i < svmFilteringData.length; i++){
             svmFilteringData[i] = 0;
         }

@@ -9,9 +9,6 @@ import android.util.Log;
 
 import static android.content.Context.SENSOR_SERVICE;
 
-/**
- * Created by LiuWeixiang on 2017/3/13.
- */
 
 public class FallSensorManager {
     private SensorManager sensorManager;

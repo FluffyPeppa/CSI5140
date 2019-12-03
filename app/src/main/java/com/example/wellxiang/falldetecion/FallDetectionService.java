@@ -56,7 +56,7 @@ public class FallDetectionService extends Service {
         fall = new Fall();
         fall.setThresholdValue(25,5);
         running = true;
-        //在通知栏上显示服务运行
+
         showInNotification();
 
         localBroadcastManager = LocalBroadcastManager.getInstance(this);
@@ -83,7 +83,7 @@ public class FallDetectionService extends Service {
         super.onDestroy();
     }
 
-    //开一个线程用于检测跌倒
+    //new thread for detectioin
     class DetectThread extends Thread{
         @Override
         public void run() {
@@ -91,7 +91,7 @@ public class FallDetectionService extends Service {
             Log.d(TAG, "DetectThread.start()");
             while (running) {
                 if (fall.isFell()) {
-                    Log.e(TAG, "跌倒了");
+                    Log.e(TAG, "fall");
                     running = false;
                     Message msg = handler.obtainMessage();
                     msg.what = FELL;
@@ -111,7 +111,7 @@ public class FallDetectionService extends Service {
             switch(msg.what){
                 case FELL:
                     Log.e(TAG, "FELL");
-                    //报警
+                    //alarm
 //                    showAlertDialog();
                     Intent intent = new Intent("com.broadcast.FALL_LOCAL_BROADCAST");
                     localBroadcastManager.sendBroadcast(intent);
@@ -122,7 +122,7 @@ public class FallDetectionService extends Service {
 //                    if(msg.arg1 > 0){
 //                        //动态显示倒计时
 //                        countingView.setText("                          "
-//                                + msg.arg1 + "秒后自动报警");
+//                                + msg.arg1 + "alarm send");
 //                    }else{
 //                        //倒计时结束自动关闭
 //                        if(dialog != null){
@@ -144,7 +144,7 @@ public class FallDetectionService extends Service {
 //        countingView = new TextView(getApplicationContext());
 //        AlertDialog.Builder builder = new AlertDialog.Builder(
 //                getApplicationContext());
-//        builder.setTitle("跌倒警报");
+//        builder.setTitle("Fall Alarm");
 //        builder.setView(countingView);
 //        builder.setMessage("检测到跌倒发生，是否发出警报？");
 //        builder.setIcon(R.drawable.ic_warning);
@@ -172,7 +172,7 @@ public class FallDetectionService extends Service {
 //    }
 //
 //    /*
-//    倒计时
+//    count down
 //     */
 //    private void countDown() {
 //        timer = new Timer();
@@ -192,9 +192,7 @@ public class FallDetectionService extends Service {
 //        timer.schedule(timerTask, 100, 1000);
 //    }
 
-    /*
-    在通知栏上显示服务运行
-     */
+
     private void showInNotification() {
         Intent intent = new Intent(this,MainActivity.class);
         PendingIntent pi = PendingIntent.getActivity(this, 0, intent, 0);

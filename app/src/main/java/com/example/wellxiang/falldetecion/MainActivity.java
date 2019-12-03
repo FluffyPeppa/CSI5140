@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
 //    }
 
     private void setupDrawerContent(NavigationView navigationView) {
-        //监听navigationView的项目选择
+
         navigationView.setNavigationItemSelectedListener(
                 new NavigationView.OnNavigationItemSelectedListener() {
                     @Override
@@ -146,7 +146,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void showFragment(int index){
         FragmentTransaction ft = getFragmentManager().beginTransaction();
-        //想要显示一个fragment，先隐藏所有fragment，防止重叠
+
         hideFragment(ft);
 
         switch (index){

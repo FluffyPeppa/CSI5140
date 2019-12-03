@@ -31,9 +31,6 @@ import com.amap.api.maps.UiSettings;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-/**
- * Created by LiuWeixiang on 2017/2/27.
- */
 
 public class MapActivity extends AppCompatActivity implements LocationSource, AMapLocationListener {
     private MapView mMapView;
@@ -62,7 +59,7 @@ public class MapActivity extends AppCompatActivity implements LocationSource, AM
         //为activity窗口设置活动栏
         setSupportActionBar(mToolbar);
         final ActionBar actionBar = getSupportActionBar();
-        //设置返回图标
+
         actionBar.setHomeAsUpIndicator(0);
         actionBar.setDisplayHomeAsUpEnabled(true);
         mToolbar.setNavigationOnClickListener(new View.OnClickListener() {

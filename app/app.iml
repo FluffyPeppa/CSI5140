@@ -102,7 +102,7 @@
     <orderEntry type="library" scope="TEST" name="Gradle: com.android.support.test:runner:0.5@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.android.support.test:exposed-instrumentation-api-publish:0.5@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.android.support.test.espresso:espresso-idling-resource:2.2.2@aar" level="project" />
-    <orderEntry type="library" name="Gradle: __local_aars__:/Users/Michelle/Desktop/Fall-Detection-master/app/libs/AMap3DMap_4.1.3_AMapLocation_3.2.0_20161208.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="Gradle: __local_aars__:/Users/Michelle/Desktop/CSI5140/app/libs/AMap3DMap_4.1.3_AMapLocation_3.2.0_20161208.jar:unspecified@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:support-annotations:23.4.0@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:design:23.2.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:appcompat-v7:23.4.0@aar" level="project" />

@@ -15,10 +15,6 @@ import android.widget.TextView;
 import java.util.Timer;
 import java.util.TimerTask;
 
-/**
- * Created by LiuWeixiang on 2017/3/12.
- */
-
 public class AlertDialogFragment extends DialogFragment {
     private TextView textView;
     private AlertDialog.Builder builder;

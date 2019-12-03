@@ -70,17 +70,17 @@ public class FallLocalReceiver extends BroadcastReceiver implements AMapLocation
 
 
     /*
-    弹窗报警
+    dialog alarm
      */
     private void showAlertDialog() {
         countingView = new TextView(context);
         AlertDialog.Builder builder = new AlertDialog.Builder(
                 context.getApplicationContext());
-        builder.setTitle("跌倒警报");
+        builder.setTitle("Fall Alert");
         builder.setView(countingView);
-        builder.setMessage("检测到跌倒发生，是否发出警报？");
+        builder.setMessage("Detect Fall, Send Alert?");
         builder.setIcon(R.drawable.ic_warning);
-        builder.setNegativeButton("取消", new DialogInterface.OnClickListener() {
+        builder.setNegativeButton("cancel", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 timer.cancel();

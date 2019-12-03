@@ -7,9 +7,6 @@ import android.preference.Preference;
 import android.preference.PreferenceFragment;
 import android.util.Log;
 
-/**
- * Created by LiuWeixiang on 2017/3/1.
- */
 
 public class SettingsFragment extends PreferenceFragment implements SharedPreferences.OnSharedPreferenceChangeListener{
     public static final String KEY_NAME = "pre_key_name";
